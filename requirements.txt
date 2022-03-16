@@ -1,0 +1,4 @@
+Flask==2.0.3
+marshmallow-dataclass==8.5.3
+pymongo==4.0.2
+dataclasses-json==0.5.6
