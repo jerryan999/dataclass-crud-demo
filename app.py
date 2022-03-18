@@ -54,6 +54,8 @@ def update_book():
     if status:
         return jsonify(status), 400
     book_id = payload.get("id")
+    if not db_retrieve_book(book_id):
+        return jsonify({"message": "Book not found"}), 404
 
     success = db_update_book(book_id, payload)
     if not success:
